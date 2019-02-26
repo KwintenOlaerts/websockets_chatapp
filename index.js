@@ -19,15 +19,13 @@ io.on('connection', function(socket){
 
     //handle chat events
     socket.on('chat',function(data){
-        console.log(11);
         io.sockets.emit('chat', data);
     });
 
     socket.on('typing',function(data){
-        console.log(12)
         socket.broadcast.emit('typing', data)
     });
 
 });
 
-//Listen for events
+
