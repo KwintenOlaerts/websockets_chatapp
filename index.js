@@ -28,7 +28,7 @@ var port = process.env.PORT || 4000;
 app.use(express.static('public'));
 
 //socket setup
-var io = socket(server);
+var io = socket(port);
 
 io.on('connection', function(socket){
     console.log('made socket connection', socket.id);
