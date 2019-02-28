@@ -50,8 +50,12 @@ io.on('connection', function(socket){
 
 // Heroku setup
 
-server.listen(process.env.PORT || 3000);
-console.log('Server running...');
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+    console.log("server draait");
+});
 
 
 
