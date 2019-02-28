@@ -12,11 +12,6 @@ var socket = require("socket.io");
 var app = express();
 var server = process.env.PORT || 5000;
 
-
-app.listen(server, function(){
-    console.log("mooi begin");
-});
-
 // socket.username = "Anon"
 // //listen on change_username
 // socket.on('change_username', (data) => {
@@ -29,7 +24,7 @@ app.listen(server, function(){
 app.use(express.static('public'));
 
 //socket setup
-var io = socket(server);
+var io = socket(app);
 
 io.on('connection', function(socket){
     console.log('made socket connection', socket.id);
@@ -45,6 +40,10 @@ io.on('connection', function(socket){
 
 });
 
+
+app.listen(server, function(){
+    console.log("mooi begin");
+});
 
 
 // document.getElementById("NameList").innerHTML = "Paragraph changed!";
