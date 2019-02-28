@@ -10,17 +10,12 @@ let userNames =[];
 
 // app setup
 var app = express();
-var server = app.listen(4000, function(){
-    console.log("mooi begin");
-});
+var server = process.env.PORT || 5000;
 
-// socket.username = "Anon"
-// //listen on change_username
-// socket.on('change_username', (data) => {
-//     socket.username = data.username;
-//     userNames[socket.username] = socket;
-//     io.sockets.emit('usernames', Object.keys(userNames));
-// })
+// app.listen(4000, function(){
+//     console.log("mooi begin");
+// });
+
 
 // Static files
 app.use(express.static('public'));
