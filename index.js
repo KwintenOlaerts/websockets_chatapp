@@ -3,7 +3,7 @@ var express = require("express");
 var socket = require("socket.io");
 
 // Make an array to store the usernames, so that I can put them in an UL
-let userNames =[];
+// let userNames =[];
 
 // socket.username = "Bert"
 // console.log(username.io);
@@ -16,6 +16,13 @@ var server = process.env.PORT || 5000;
 //     console.log("mooi begin");
 // });
 
+// socket.username = "Anon"
+// //listen on change_username
+// socket.on('change_username', (data) => {
+//     socket.username = data.username;
+//     userNames[socket.username] = socket;
+//     io.sockets.emit('usernames', Object.keys(userNames));
+// })
 
 // Static files
 app.use(express.static('public'));
