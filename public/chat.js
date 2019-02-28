@@ -32,4 +32,17 @@ socket.on('typing', function(data){
   feedback.innerHTML = '<p><em>' + data + ' is typing a message...</em></p>';
 });
 
+// add user to list
+
+// socket.on('username'), (data) => {
+//   let listofUsers = "",
+//   for loop
+// }
+
+
+
+// kamer kiezen: 
+// option id's 
+
+
 
