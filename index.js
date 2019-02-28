@@ -8,13 +8,17 @@ var socket = require("socket.io");
 // socket.username = "Bert"
 // console.log(username.io);
 
+
+
 // app setup
 var app = express();
 var server = app.listen(4000, function(){
     console.log("mooi begin");
 });
 
-var port = process.env.PORT || 4000;
+
+
+
 
 // socket.username = "Anon"
 // //listen on change_username
@@ -28,7 +32,7 @@ var port = process.env.PORT || 4000;
 app.use(express.static('public'));
 
 //socket setup
-var io = socket(port);
+var io = socket(server);
 
 io.on('connection', function(socket){
     console.log('made socket connection', socket.id);
@@ -43,6 +47,11 @@ io.on('connection', function(socket){
     });
 
 });
+
+// Heroku setup
+
+server.listen(process.env.PORT || 3000);
+console.log('Server running...');
 
 
 
