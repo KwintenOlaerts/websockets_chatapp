@@ -12,9 +12,10 @@ var socket = require("socket.io");
 var app = express();
 var server = process.env.PORT || 5000;
 
-// app.listen(4000, function(){
-//     console.log("mooi begin");
-// });
+
+app.listen(server, function(){
+    console.log("mooi begin");
+});
 
 // socket.username = "Anon"
 // //listen on change_username
